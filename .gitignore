@@ -1,9 +1,18 @@
 .DS_Store
-.dart_tool/
-
+.atom/
+.idea
+.vscode/
+*.code-workspace
 .packages
 .pub/
-
+packages
+pubspec.lock
+coverage/
+ios/Flutter/Generated.xcconfig
+.flutter-plugins
+example/ios/.symlinks
+example/ios/Flutter/Generated.xcconfig
+doc/api/
 build/
 
-.flutter-plugins
+example/feather
