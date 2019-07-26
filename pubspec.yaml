@@ -10,18 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  collection: ^4.2.2
-  url_launcher:
-    git:
-      url: https://github.com/wittech/plugins.git
-      path: packages/url_launcher
-  image_picker:
-    git:
-      url: https://github.com/wittech/plugins.git
-      path: packages/image_picker
+  collection: ^1.14.6
+  url_launcher: ^5.0.0
+  image_picker: ^0.5.0
   quill_delta: ^1.0.0-dev.1.0
   notus: ^0.1.0
-  meta: ^1.1.6
+  meta: ^1.1.0
 
 dev_dependencies:
   flutter_test:
