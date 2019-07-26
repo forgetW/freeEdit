@@ -10,12 +10,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  collection: ^1.14.6
-  url_launcher: ^5.0.0
-  image_picker: ^0.5.0
+  collection: ^4.2.2
+  url_launcher: ^5.0.5
+  image_picker: ^0.6.0+15
   quill_delta: ^1.0.0-dev.1.0
   notus: ^0.1.0
-  meta: ^1.1.0
+  meta: ^1.1.6
 
 dev_dependencies:
   flutter_test:
