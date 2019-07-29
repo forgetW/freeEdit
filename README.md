@@ -7,41 +7,54 @@ request or found a bug, please file it at the [issue tracker][].
 
 [issue tracker]: https://github.com/memspace/zefyr/issues
 
-For documentation see [https://github.com/memspace/zefyr](https://github.com/memspace/zefyr).
+### Documentation
 
-![zefyr screenshot](https://github.com/memspace/zefyr/raw/master/packages/zefyr/zefyr.png)
+* [Quick Start][quick_start]
+* [Data Format and Document Model][data_and_document]
+* [Style attributes][attributes]
+* [Heuristic rules][heuristics]
+* [Images][images]
+* [FAQ][faq]
 
-## Installation
+[quick_start]: /doc/quick_start.md
+[data_and_document]: /doc/data_and_document.md
+[attributes]: /doc/attributes.md
+[heuristics]: /doc/heuristics.md
+[images]: /doc/images.md
+[faq]: /doc/faq.md
 
-Official releases of Zefyr can be installed from Dart's Pub package repository.
+## Clean and modern look
 
-> Note that versions from Pub track stable channel of Flutter. If you are on master channel
-> check out instructions below in this document.
+Zefyr's rich text editor is built with simplicity and flexibility in
+mind. It provides clean interface for distraction-free editing. Think
+Medium.com-like experience.
+
+<img src="https://github.com/memspace/zefyr/raw/master/assets/zefyr-1.png" width="375"> <img src="https://github.com/memspace/zefyr/raw/master/assets/zefyr-2.png" width="375">
+
+## Markdown-inspired semantics
+
+Ever needed to have a heading line inside of a quote block, like in
+this Markdown block:
+
+> ### I'm a Markdown heading
+> And I'm a regular paragraph
+
+Zefyr can deliver exactly that:
+
+<img src="https://github.com/memspace/zefyr/raw/master/assets/markdown-semantics.png" width="375">
 
 
-To install Zefyr from Pub add `zefyr` package as a dependency to your `pubspec.yaml`:
+## Ready for collaborative editing
 
-```yaml
-dependencies:
-  zefyr: [latest_version]
-```
+Zefyr's document model uses data format compatible with
+[Operational Transformation][ot] which makes it possible to use for
+collaborative editing use cases or whenever there is a need for
+conflict-free resolution of changes.
 
-And run `flutter packages get`.
+> Zefyr editor uses Quill.js **Delta** as underlying data format. Read
+> more about Zefyr and Deltas in our [documentation][data_and_document].
+> Make sure to checkout [official documentation][delta] for Delta format
+> as well.
 
-#### Installing version of Zefyr compatible with master channel of Flutter.
-
-You need to add git dependency to your pubspec.yaml that points to `flutter-master` branch:
-
-```yaml
-dependencies:
-  zefyr:
-    git:
-      url: https://github.com/memspace/zefyr.git
-      ref: flutter-master
-      path: packages/zefyr
-```
-
-And run `flutter packages get`.
-
-Continue to [https://github.com/memspace/zefyr/blob/master/doc/quick_start.md](documentation) to
-learn more about Zefyr and how to use it in your projects.
+[delta]: https://quilljs.com/docs/delta/
+[ot]: https://en.wikipedia.org/wiki/Operational_transformation

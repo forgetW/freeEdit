@@ -2,4 +2,5 @@
 
 set -e
 
-$TRAVIS_BUILD_DIR/flutter/bin/flutter test
+cd "packages/$1"
+./tool/travis.sh

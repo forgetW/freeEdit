@@ -2,6 +2,7 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 import 'package:flutter/material.dart';
+import 'custom page.dart';
 import 'src/form.dart';
 import 'src/full_page.dart';
 import 'src/view.dart';
@@ -20,6 +21,7 @@ class ZefyrApp extends StatelessWidget {
       home: HomePage(),
       routes: {
         "/fullPage": buildFullPage,
+        "/custom": buildCustomPage,
         "/form": buildFormPage,
         "/view": buildViewPage,
       },
@@ -28,6 +30,10 @@ class ZefyrApp extends StatelessWidget {
 
   Widget buildFullPage(BuildContext context) {
     return FullPageEditorScreen();
+  }
+
+  Widget buildCustomPage(BuildContext context) {
+    return CustomPage();
   }
 
   Widget buildFormPage(BuildContext context) {
@@ -56,6 +62,12 @@ class HomePage extends StatelessWidget {
           FlatButton(
             onPressed: () => nav.pushNamed('/fullPage'),
             child: Text('Full page editor'),
+            color: Colors.lightBlue,
+            textColor: Colors.white,
+          ),
+          FlatButton(
+            onPressed: () => nav.pushNamed('/custom'),
+            child: Text('custom view to edit'),
             color: Colors.lightBlue,
             textColor: Colors.white,
           ),
