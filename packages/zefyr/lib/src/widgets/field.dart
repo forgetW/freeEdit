@@ -41,7 +41,7 @@ class _ZefyrFieldState extends State<ZefyrField> {
   @override
   Widget build(BuildContext context) {
     Widget child = ZefyrEditor(
-      padding: EdgeInsets.symmetric(vertical: 6.0),
+      //padding: EdgeInsets.symmetric(vertical: 6.0),
       controller: widget.controller,
       focusNode: widget.focusNode,
       autofocus: widget.autofocus,
@@ -59,8 +59,7 @@ class _ZefyrFieldState extends State<ZefyrField> {
     }
 
     return AnimatedBuilder(
-      animation:
-          Listenable.merge(<Listenable>[widget.focusNode, widget.controller]),
+      animation: Listenable.merge(<Listenable>[widget.focusNode, widget.controller]),
       builder: (BuildContext context, Widget child) {
         return InputDecorator(
           decoration: _getEffectiveDecoration(),
@@ -77,9 +76,7 @@ class _ZefyrFieldState extends State<ZefyrField> {
     final InputDecoration effectiveDecoration =
         (widget.decoration ?? const InputDecoration())
             .applyDefaults(Theme.of(context).inputDecorationTheme)
-            .copyWith(
-              enabled: widget.enabled ?? true,
-            );
+            .copyWith(enabled: widget.enabled ?? true);
 
     return effectiveDecoration;
   }

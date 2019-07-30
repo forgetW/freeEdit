@@ -15,7 +15,7 @@ dependencies:
     git:
       url: https://github.com/wittech/plugins.git
       path: packages/url_launcher
-  image_picker: ^0.5.0
+  image_picker: ^0.6.0+15
   quill_delta: ^1.0.0-dev.1.0
   notus: ^0.1.0
   meta: ^1.1.0
